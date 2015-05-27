@@ -18,8 +18,8 @@
  * Solarized colors by Ethan Schoonover
  */
 html * {
-	color-profile: sRGB;
-	rendering-intent: auto;
+  color-profile: sRGB;
+  rendering-intent: auto;
 }
 
 $mainFont: 'Fira Sans', sans-serif;
@@ -127,4 +127,26 @@ p.subtitle {
 .reveal table {
   margin-top: 40px;
   width: 100%;
+}
+
+.timesheet {
+  width: 100%;
+}
+
+.timesheet .data,
+.timesheet .scale section {
+  font-family: 'Fira Sans';
+}
+
+.timesheet .scale section {
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+.timesheet .date {
+  display: none;
+}
+
+.timesheet .data li .label {
+  font-weight: 300;
 }

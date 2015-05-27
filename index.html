@@ -14,6 +14,9 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
+    <!-- Time sheets -->
+		<link rel="stylesheet" href="lib/css/timesheet.css">
+
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/fira.css" id="theme">
 
@@ -207,6 +210,17 @@ function linkify( selector ) {
 					</p>
 				</section>
 
+        <section class="white">
+          <h2>Time series</h2>
+          <div id="timesheet-before"></div>
+					<p>Timesheet courtesy of (a hacked) <a href="https://github.com/sbstjn/timesheet.js">timesheet.js</a>.</p>
+        </section>
+
+        <section class="white">
+          <h2>Time series (bis)</h2>
+          <div id="timesheet-after"></div>
+        </section>
+
 				<section style="text-align: left;">
 					<h1>Thank You</h1>
 				</section>
@@ -216,6 +230,7 @@ function linkify( selector ) {
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
+		<script src="lib/js/timesheet.js"></script>
 		<script src="js/reveal.js"></script>
 
 		<script>
@@ -240,6 +255,22 @@ function linkify( selector ) {
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
+
+    Reveal.addEventListener('slidechanged', function(event) {
+      new Timesheet('timesheet-before', 0, 15, [
+        ['0', '7', 'Scrolling', 'ipsum'],
+        ['5', '8', 'Feedback', 'sit'],
+        ['5', '6', 'Mutation', 'dolor'],
+        ['5', '11', 'Transition', 'lorem']
+      ]);
+
+      new Timesheet('timesheet-after', 0, 15, [
+        ['0', '7', 'Scrolling', 'ipsum'],
+        ['7', '10', 'Feedback', 'sit'],
+        ['10', '11', 'Mutation', 'dolor'],
+        ['11', '14', 'Transition', 'lorem']
+      ]);
+    });
 
 		</script>
 
