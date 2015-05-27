@@ -1,0 +1,130 @@
+/**
+ * Solarized Light theme for reveal.js.
+ * Author: Achim Staebler
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+@import url(../../lib/font/Fira/fira.css);
+
+/**
+ * Solarized colors by Ethan Schoonover
+ */
+html * {
+	color-profile: sRGB;
+	rendering-intent: auto;
+}
+
+$mainFont: 'Fira Sans', sans-serif;
+$mainFontSize: 22px;
+$headingFont: 'Fira Sans', sans-serif;
+$headingFontWeight: 400;
+
+$backgroundColor: white;
+$mainColor: #5E5E5E;
+$headingColor: #0194DE;
+$headingTextShadow: none;
+$headingTextTransform: none;
+$linkColor: #268bd2;
+$linkColorHover: lighten( $linkColor, 20% );
+
+$heading1Size: 1.95em;
+$heading3Size: 1.95em;
+$heading2Size: 1.6em;
+$heading4Size: 1.00em;
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+.reveal .slides {
+  padding-top: 90px;
+  box-sizing: border-box;
+}
+
+.reveal {
+  font-weight: 300;
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal h1 {
+  font-style: italic;
+  display: inline-block;
+  margin-top: 10%;
+  margin-bottom: 15px;
+}
+
+.reveal h3 {
+  position: relative;
+  font-style: italic;
+  font-weight: 200;
+  display: inline-block;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.reveal h3::before {
+  content: "|";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.reveal h2 {
+  color: $mainColor;
+  font-weight: 500;
+  font-style: italic;
+  margin-bottom: 25px;
+}
+
+div.footer {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+}
+div.footer img {
+  width: 100px;
+  height: 40px;
+}
+
+p.subtitle {
+  margin: 0;
+  font-style: italic;
+}
+
+.reveal code {
+  font-family: 'Fira Mono', monospace;
+  font-size: 1.4em;
+  line-height: 1.4em;
+}
+
+.reveal pre code {
+  background: #f7f7f7;
+  color: #3f3f3f;
+  padding: 15px;
+}
+
+.reveal pre {
+  width: 100%;
+  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.2);
+}
+
+.reveal blockquote {
+  font-size: 1.3em;
+  box-shadow: 0px 0px 0px rgba(0,0,0,0.0);
+}
+
+.reveal table {
+  margin-top: 40px;
+  width: 100%;
+}
